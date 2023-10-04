@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+<body>
+        <div>
+            <div>
+                <input type="text" placeholder="First Name" name="fName" id="fName">
+                <input type="text" placeholder="Last Name" name="lName" id="lname">
+                <input type="email" placeholder="Email" name="email" id="email">
+            </div>
+        </div>
+</body>
+</html>
+
+<script>
+    let profile = {}
+    let inputs = document.querySelectorAll("input");
+    console.log(inputs)
+
+    
+
+    inputs.forEach(element => {
+            element.addEventListener("blur", (e)=>{
+                const key = e.target.name
+                const value = e.target.value
+                const email = e.target.email
+                profile[key]=value
+            } )
+    });
+
+    console.log(profile)
+</script>
