@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  let a = 10;
+  const b = 20;
+  var c = 30;
+
+  console.log(this.a);
+  console.log(this.b);
+  console.log(this.c);
+
+  function tryMe() {
+
+    let a=50;
+    const b= 70;
+    var c =100;
+    d = 1500000
+    console.log("tryMe inside function accessing a:", this.a);
+    console.log("tryMe inside function accessing b:", this.b);
+    console.log("tryMe inside function accessing c:", this.c);
+    console.log("tryMe inside function accessing d:",this.d )
+  }
+
+  tryMe();
+</script>

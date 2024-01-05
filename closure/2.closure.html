@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+        const parentFunction= ()=>{
+
+            let arr = [];
+
+            const childFunction = (item)=>{
+             arr.push(item)
+                return arr;
+            }
+
+            return childFunction;
+        }
+
+        const callingParentFunction = parentFunction();
+        console.log(callingParentFunction(10))
+        console.log(callingParentFunction(20))
+        console.log(callingParentFunction(30))
+        console.log(callingParentFunction(40))
+        console.log(callingParentFunction(50))
+
+</script>

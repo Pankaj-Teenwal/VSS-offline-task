@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This in Arrow Function</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+
+<script>
+    var gharKiBahu = "Rani Baby";
+
+    function roopeshKaPariwar(){
+        console.log("Roopesh ke pariwar ki nazar me: this.bahu: ", this);
+
+        function khudRoopesh(){
+            console.log("Roopesh ki nazar me: This.bahu:", this);
+
+        }
+
+        const roopeshKeBhaiya = ()=>{
+            console.log("roopeshKeBhaiya ki nazar me: this.bahu: ", this);
+
+            function    
+        }
+
+        khudRoopesh();
+        roopeshKeBhaiya();
+    }
+
+    roopeshKaPariwar.call({gharKiBahu:"Roopa Baby"})
+</script>

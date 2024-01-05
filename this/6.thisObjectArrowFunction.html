@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    // arrow function will respect the parent function execution context 
+     var b= 20;
+    let profile = {
+        name:"raani",
+        city:"indore",
+        address: "KGB",
+
+        getInfo: function(){
+            console.log("Parent function this",this)
+            let a = 20;
+
+            const child = ()=>{
+                console.log("Child function this", this)
+                
+                function insideChild(){
+                    console.log("indideChild Function this", this)
+                }
+
+                const insideChildArrow = ()=>{
+                    console.log("inside Child Arrow: ", this)
+                }
+                insideChild()
+                insideChildArrow()
+            }
+
+            child()
+        }
+    }
+
+    profile.getInfo()
+</script>

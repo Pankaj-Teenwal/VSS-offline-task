@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    var b= 20;
+    let profile = {
+        name:"raani",
+        city:"indore",
+        address: "KGB",
+
+        getInfo: function parent(){
+            console.log("Parent function this",this)
+            let a = 20;
+
+            function child(){
+                console.log("child function this: ",this)
+            }
+
+            child()
+        }
+    }
+
+    profile.getInfo()
+</script>

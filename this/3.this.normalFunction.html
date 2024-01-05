@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+
+    var a = 10;
+
+    function grandfather(){
+        console.log("accessing a inside grandFather: ", this.a)
+
+        function father(){
+            console.log("accessing a inside father: ", this.a)
+
+            function child(){
+                console.log("accessing a inside child: ", this.a)
+            }
+
+            child()
+        }
+        father()
+    }
+    grandfather.call({a:20})
+
+
+
+</script>

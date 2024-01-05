@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  let printUserName = function (homeTown, state) {
+    console.log(`${this.firstName} ${this.lastName} ${homeTown} ${state}`);
+  };
+
+  let name = {
+    firstName: "pankaj",
+    lastName: "teenwal",
+  };
+
+  let name2 = {
+    firstName: "sachin",
+    lastName: "srivastava",
+  };
+  //function borrowing
+  /*
+  1. Call. 
+  2. Apply.
+  3. Bind.
+  */
+ // Call.
+  printUserName.call(name, "Mandawa", "Rajasthan")
+
+  //Apply.
+  printUserName.apply(name2, ["Gorakhpur", "Uttar Pardesh"]);
+
+  //Bind.
+
+  let printName = printUserName.bind(name2, "Mandawa", "Rajasthan")
+
+  console.log("PrintName", printName)
+
+  printName()
+
+</script>

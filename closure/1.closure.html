@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  /*
+        What is closure:-
+
+        1. closure is feature of javaScript that allows child functions to access the properties of parent function wether they are dead or alive
+        2. closure are used for data caching
+
+    
+    
+    */
+  const parentFunction = () => {
+    let a = 10;
+    let b = 20;
+
+    const childFunction = (c) => {
+      return a + b + c;
+    };
+
+    return childFunction;
+  };
+
+  let callingParentFunction = parentFunction();
+
+  console.log(callingParentFunction(10));
+  console.log(callingParentFunction(20));
+  console.log(callingParentFunction(30));
+  console.log(callingParentFunction(40));
+  console.log(callingParentFunction(50));
+  console.log(callingParentFunction(60));
+  console.log(callingParentFunction(70));
+  console.log(callingParentFunction(80));
+  console.log(callingParentFunction(90));
+  console.log(callingParentFunction(100));
+</script>

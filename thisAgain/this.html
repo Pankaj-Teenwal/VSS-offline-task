@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  var firstName = "Ankit";
+
+  function myfun1() {
+    console.log("inside func", this.firstName);
+  }
+  let obj1 = {
+    firstName: "pankaj",
+    func: function myfun() {
+      console.log("inside func", this.firstName);
+    },
+  };
+
+  let obj2 = {
+    firstName: "shubham",
+  };
+
+  myfun1.call(obj2);
+</script>

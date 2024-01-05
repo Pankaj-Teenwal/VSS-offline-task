@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    
+
+    let printUserName  = function (homeTown, state){
+            console.log(`${this.firstName} ${this.lastName} ${homeTown} ${state}`)
+        }
+
+    let name = {
+        firstName : "pankaj",
+        lastName : "teenwal",
+    }
+
+    let name2 = {
+        firstName : "sachin",
+        lastName : "srivastava"
+    }
+
+
+    printUserName.apply(name2, ["Gorakhpur", "Uttar Pardesh"])
+</script>

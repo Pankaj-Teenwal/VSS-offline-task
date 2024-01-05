@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let obj = {
+        name: "pankaj",
+        lastName : "teenwal",
+        func: func = ()=>{
+            console.log("func function this", this)
+
+            const functionInsideFunc =()=>{
+                console.log("functionInsideFuncThis", this)
+
+                const nestedFunc = ()=>{
+                    console.log("nestedFuncthis", this)
+                }
+
+                nestedFunc()
+            }
+
+            functionInsideFunc()
+        }
+    }
+    obj.func()
+</script>

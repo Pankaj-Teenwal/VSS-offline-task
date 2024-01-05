@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+
+    
+    function setUserName (userName){
+        this.userName = userName;
+    }
+
+
+    function createUser (userName, email, password){
+        setUserName.call(this, userName)
+        this.email = email;
+        this.password = password;
+
+    }
+
+    const user = new createUser("Pankaj", "pankaj@gmail.com", 123)
+
+    console.log("user",user)
+</script>
