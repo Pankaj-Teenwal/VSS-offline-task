@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>
 
 <script>
 
-        const parentFunction= ()=>{
+  function y(){
 
-            let arr = [];
+  
+  function x() {
+    for (let i = 0; i <= 5; i++) {
+      function closure(x){
+        setTimeout(function () {
+        console.log(i);
+      }, i * 2000);
+      }
 
-            const childFunction = (item)=>{
-             arr.push(item)
-                return arr;
-            }
+      closure(i)
 
-            return childFunction;
-        }
+    }
 
-        const callingParentFunction = parentFunction();
-        console.log(callingParentFunction(10))
-        console.log(callingParentFunction(20))
-        console.log(callingParentFunction(30))
-        console.log(callingParentFunction(40))
-        console.log(callingParentFunction(50))
-
+    console.log("Namaste JavaScript")
+  }
+  x();
+}
+y()
 </script>

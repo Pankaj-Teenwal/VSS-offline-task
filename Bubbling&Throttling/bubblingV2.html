@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            min-width: 100px;
+            min-height: 100px;
+            padding: 30px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+        <div id="grandParent"> Grand Parent
+            <div id="parent"> Parent
+                <div id="child"> Chid
+
+                </div>
+            </div>
+        </div>
+
+        <div id="individualDiv">individualDiv
+            <div>indivudual child div</div>
+        </div>
+</body>
+</html>
+
+<script>
+    let grandParent = document.getElementById("grandParent")
+
+    grandParent.addEventListener('click', (e)=>{
+        console.log("I am GrandParent")
+        
+    },)
+
+    let parent = document.getElementById("parent")
+
+    parent.addEventListener('click', (e)=>{
+        console.log("I am parent")
+        
+    },)
+
+    let child = document.getElementById("child")
+
+    child.addEventListener('click', (e)=>{
+        console.log("I am child")
+        
+    },)
+
+    let individualDiv = document.getElementById("individualDiv")
+
+    individualDiv.addEventListener('click', (e)=>{
+        console.log("I am individualDiv")
+        
+    },)
+</script>

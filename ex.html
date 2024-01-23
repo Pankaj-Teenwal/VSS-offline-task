@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+  
+  let multiply = function (x, y){
+
+    console.log(x*y)
+  }
+
+  let multiplyByClosure = function(x){
+
+    return function(y){
+      console.log(x*y)
+    }
+  }
+
+
+  let multiplyByTwo = multiply.bind(this, 2)
+
+  let multiplyByThree = multiply.bind(this,3)
+
+  multiplyByTwo(8)
+
+  multiplyByThree(5)
+
+  let ex = multiplyByClosure(10);
+  ex(10)
+
+</script>

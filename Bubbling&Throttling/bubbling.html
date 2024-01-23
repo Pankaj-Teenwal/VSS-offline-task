@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body * {
+        margin: 10px;
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+  <body onclick="alert(`Bubbling doesn't reach here`)">
+    <!-- Q. what is Bubbling:- wne an event happend on an element, it first runs the handlers on it, then on its parent then all the way up on the other ancestors. 
+    
+        so if we click on the <p> then we'll see 3 alerts: p->div->form.
+
+            this process is called "bubbling"m becouse events "bubble" form the inner element up through parents like a bubble in the water.
+    
+    -->
+
+    <!-- <form onclick="alert('form')">
+        FORM
+        <div onclick="alert('Div')">
+          DIV
+          <p onclick="alert('p')">p</p>
+        </div>
+      </form> -->
+
+    <!-- 
+    How  to stop bubbling:- a bubbling event goes from the ratget element straight up. Normally it goes upward till <html>, and then to document object, and some events even reach window, calling all handlers on the path.
+
+    but any handlers may decide that the event has been fully processed and stop the bubbling.
+
+    the method for it is event.stopPropagation() -->
+
+    <!-- <button onclick="event.stopPropagation()" , onclick="mouseHover()">
+      click Me
+    </button> -->
+
+    <!-- <form onclick="alert('form')">
+        FORM
+        <div onclick="event.stopPropagation()">
+          DIV
+          <p onclick="alert('p')">p</p>
+        </div>
+      </form> -->
+
+    <form>
+      FORM
+      <div>
+        DIV
+        <p>P</p>
+      </div>
+    </form>
+  </body>
+</html>
+
+<script>
+  for (let elem of document.querySelectorAll("*")) {
+    elem.addEventListener("click", (e) => alert(`Capturing: ${elem.tagName}`));
+
+    elem.addEventListener("click", (e) => alert(`Bubbling: ${elem.tagName}`));
+  }
+</script>

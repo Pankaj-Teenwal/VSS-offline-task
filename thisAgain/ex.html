@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>
 
 <script>
-    const object = {
-        message: "hello, World",
+  function f() {
+    let value = 123;
 
-        getMessage(){
-            const message = "Hello Earth";
-            return this.message;
-        }
-    }
+    return function () {
+      alert(value);
+    };
+  }
 
-    console.log(object.getMessage())
+  let g = f(); // g.[[Environment]] stores a reference to the Lexical Environment
+  // of the corresponding f() call
+
+  console.log(g.Environment)
 </script>

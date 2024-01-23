@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+
+<script>
+
+    //Q.1
+    //   const age = 10;
+
+    //   var person = {
+    //       name: "Piyush",
+    //       age:20,
+    //       getAge : function(){
+    //           return this.age;
+    //       },
+    //   }
+
+    //   var person2 = {age: 24};
+
+    //  console.log(person.getAge.call(person2))
+
+
+
+
+  //Q.2
+
+//   var status = "😎";
+
+//   setTimeout(()=>{
+//       const status = "😍";
+
+//       const data = {
+//           status: "🥑",
+
+//           getStatus(){
+//               return this.status;
+//           }
+//       };
+//       console.log(data.getStatus()); //🥑
+//       console.log(data.getStatus.call(this))
+//   },0)
+
+
+//Q.3 
+
+// const animals = [
+//     {species:"Lion", name:"king"},
+//     {species: "Whale", name:"Queen"},
+// ];
+
+// function printAnimals(i){
+//     this.print = function (){
+//         console.log("#"+i+" "+this.species+ ":"+this.name)
+//     }
+//     this.print();
+// }
+
+// for(let i=0; i<animals.length;i++){
+//     printAnimals.call(animals[i],i)
+// }
+
+
+// Q.4 append and array to another array.
+// const array = ["a", "b"];
+// const elements = [0,1,2];
+// array.push.call(array, ...elements)
+// console.log(array)
+
+
+// Q.5 Using apply to enhance built-in function
+
+// const numbers = [5,6,3,7,8];
+// console.log(Math.max(numbers))
+
+// console.log(Math.min.apply(this, numbers))
+
+// Q.6 Bound Function
+
+// function f(){
+//     console.log(this);
+// }
+
+// let user = {
+//     g:f.bind(null),
+// }
+
+// console.log(user.g())
+
+// Q.7 Bind Chaining
+
+// function f(){
+//     console.log("ghgjh")
+//     console.log(this.name);
+// }
+
+// let e = f.bind({name: "John"})
+// .bind({name: "Ann"});
+// const d= e.bind({name:"some"})
+
+var age = 10;
+var person = {
+  name : "Piyush",
+  age:20,
+  getAgeArrow: ()=> console.log(this.age),
+  getAge : function (){
+    console.log(this.age)
+  },
+}
+
+var person2 ={age:24};
+
+person.getAgeArrow.call(person2)  //24
+
+
+</script>
